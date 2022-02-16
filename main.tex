@@ -1,0 +1,45 @@
+\documentclass[a4paper,14pt]{extarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{indentfirst}
+\usepackage{pdfpages} % Вставка PDF
+\usepackage{float}
+
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+
+\renewcommand{\baselinestretch}{1.5}
+\parindent 1cm % Абзацный отступ
+
+\usepackage{geometry}
+\geometry{left=3cm}
+\geometry{right=1cm}
+\geometry{top=2cm}
+\geometry{bottom=2cm}
+
+\usepackage{enumitem}
+\setlist[enumerate,itemize]{leftmargin=12.7mm}
+\makeatletter
+    \AddEnumerateCounter{\asbuk}{\@asbuk}{м)}
+\makeatother
+\setlist{nolistsep} % Нет отступов между пунктами списка
+\renewcommand{\labelitemi}{--} % Маркет списка --
+\renewcommand{\labelenumi}{\asbuk{enumi})} % Список второго уровня
+\renewcommand{\labelenumii}{\arabic{enumii})} % Список третьего уровня
+
+\begin{document}
+\tableofcontents
+\clearpage
+
+\input{chapters/0-introduction}
+\input{chapters/1-chapter}
+\input{chapters/2-chapter}
+\input{chapters/3-chapter}
+\input{chapters/4-conclusion}
+
+
+\end{document}
