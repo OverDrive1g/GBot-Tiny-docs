@@ -46,3 +46,5 @@ build
 *.fls
 *.out
 *.toc
+
+__*.tex
